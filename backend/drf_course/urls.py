@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# -----m3------
+from core import views as core_views
 
 # -----m2-----
 from rest_framework import routers
-
 router = routers.DefaultRouter()
-
 urlpatterns = router.urls
 # -----m2-----
 
 urlpatterns += [  # add "+" sign with =
     path('admin/', admin.site.urls),
+    path('contact/', core_views.ContactAPIView.as_view()),
+
 ]
