@@ -2,12 +2,8 @@ from django.db import models
 
 # Create your models here.
 # ----------m3-------------
-from utils.model_abstracts import Model
-from django_extensions.db.models import (
-    TimeStampedModel,
-    ActivatorModel,
-    TitleDescriptionModel
-)
+from .utils.model_abstracts import Model
+from django_extensions.db.models import TimeStampedModel, ActivatorModel, TitleDescriptionModel
 
 
 class Contact(
